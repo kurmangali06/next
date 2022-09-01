@@ -1,19 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../../styles/Burgers.module.css';
+import { items} from '../../db.json'
 
-const API = process.env.REACT_APP_API 
+const burgers = items
 
-export const getStaticProps = async () => {
-  const res = await fetch(API);
-  const data = await res.json();
 
-  return {
-    props: { burgers: data }
-  }
-}
 
-const Burgers = ({ burgers}) => {
+const Burgers = () => {
   return (
     <div>
       <h1>Наши Бургеры</h1>
