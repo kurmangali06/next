@@ -12,7 +12,7 @@ const Burgers = () => {
     <div>
       <h1>Наши Бургеры</h1>
       {burgers.map(burger => (
-        <Link href={`/burgers/${burger.id}`} key={burger.id}>
+        <div key={burger.id}>
           <a className={styles.burgerCard}>
             <div className={styles.imageContainer}>
               <Image 
@@ -29,7 +29,7 @@ const Burgers = () => {
               <p>{ burger.desc }</p>
             </div>
           </a>
-        </Link>
+        </div>
       ))}
     </div>
   );
